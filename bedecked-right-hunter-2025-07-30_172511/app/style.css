@@ -1,0 +1,120 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+  color: #111827;
+}
+
+h1, h2 {
+  color: #1e293b;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+#confirmation {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+#reportList {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.report-entry {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 15px 0;
+}
+
+.report-entry:last-child {
+  border-bottom: none;
+}
+
+.report-entry strong {
+  color: #1e293b;
+}
+
+/* Bottoni per Modifica ed Elimina */
+.report-entry button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}

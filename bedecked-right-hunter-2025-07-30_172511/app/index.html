@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SharkWatch - Centrale Operativa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SharkWatch – Centrale Operativa</h1>
+    <p>Operatore autorizzato. Compila i dati ricevuti per inviare la squadra d'intervento.</p>
+
+    <form id="reportForm">
+      <label for="location">Località dell'avvistamento:</label>
+      <input type="text" id="location" name="location" placeholder="Es. Lido di Ostia" required />
+
+      <label for="time">Orario approssimativo:</label>
+      <input type="datetime-local" id="time" name="time" required />
+
+      <label for="species">Tipo di squalo:</label>
+      <select id="species" name="species" required>
+        <option value="">-- Seleziona --</option>
+        <option value="Squalo Bianco">Squalo Bianco</option>
+        <option value="Verdesca">Verdesca</option>
+        <option value="Squalo Toro">Squalo Toro</option>
+        <option value="Martello">Squalo Martello</option>
+        <option value="Altro">Altro / Non identificato</option>
+      </select>
+
+      <label for="size">Dimensione stimata (m):</label>
+      <input type="number" id="size" name="size" step="0.1" placeholder="Es. 3.5" />
+
+      <label for="danger">Grado di pericolosità:</label>
+      <select id="danger" name="danger" required>
+        <option value="Basso">Basso</option>
+        <option value="Medio">Medio</option>
+        <option value="Alto">Alto</option>
+      </select>
+
+      <label for="behavior">Comportamento osservato:</label>
+      <input type="text" id="behavior" name="behavior" placeholder="Es. Aggressivo, circospetto..." />
+
+      <label for="squad">Squadra da inviare:</label>
+      <select id="squad" name="squad" required>
+        <option value="">-- Seleziona --</option>
+        <option value="Squadra Alfa">Squadra Alfa</option>
+        <option value="Squadra Delta">Squadra Delta</option>
+        <option value="Supporto Marittimo">Supporto Marittimo</option>
+        <option value="Elicotteri SAR">Elicotteri SAR</option>
+      </select>
+
+      <label for="description">Descrizione completa:</label>
+      <textarea id="description" name="description" rows="5" placeholder="Dettagli sul contesto, condizioni meteo, testimoni, ecc." required></textarea>
+
+      <label><input type="checkbox" id="civilians" name="civilians" /> Civili in pericolo</label>
+      <label><input type="checkbox" id="evacuated" name="evacuated" /> Zona evacuata</label>
+
+      <label for="contact">Identificativo operatore:</label>
+      <input type="text" id="contact" name="contact" placeholder="operatore@centrale.it" required />
+
+      <button type="submit">Invia Segnalazione</button>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <h2>Segnalazione Inviata</h2>
+      <p>Intervento coordinato. Le squadre sono state allertate.</p>
+    </div>
+  </div>
+
+  <div class="container" id="archive">
+    <h2>Archivio Segnalazioni</h2>
+    <div id="reportList">
+      <p>Nessuna segnalazione ancora registrata.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
